@@ -1,0 +1,434 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name="theme-color" content="#ff9800")
+		meta(name="msapplication-navbutton-color" content="#ff9800")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		meta(name="apple-touch-fullscreen" content="yes")
+		link(rel="icon" type="image/x-icon" sizes="16x16" href="#")
+		link(rel="icon" type="image/x-icon" sizes="32x32" href="#")
+		link(rel="icon" type="image/png" sizes="50x50" href="#")
+		link(rel="icon" type="image/png" sizes="60x60" href="#")
+		link(rel="icon" type="image/png" sizes="72x72" href="#")
+		link(rel="icon" type="image/png" sizes="76x76" href="#")
+		link(rel="icon" type="image/png" sizes="114x114" href="#")
+		link(rel="icon" type="image/png" sizes="120x120" href="#")
+		link(rel="icon" type="image/png" sizes="144x144" href="#")
+		link(rel="icon" type="image/png" sizes="152x152" href="#")
+		meta(name="format-detection" content="telephone=no")
+		title Pricebox
+		link(rel="stylesheet" href="static/css/main.css")
+	body
+		svg(style="display:none")
+			symbol(id="box" width="48" height="48")
+				path(opacity=".9" fill-rule="evenodd" clip-rule="evenodd" d="M40.812 13.472A2 2 0 0 1 42 15.3v17.523a2 2 0 0 1-1.029 1.748l-16 8.89a2 2 0 0 1-1.942 0l-16-8.89A2 2 0 0 1 6 32.823V15.3a2 2 0 0 1 1.188-1.828l16-7.111a2 2 0 0 1 1.624 0l16 7.111z" fill="#FF8F00")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M29.934 8.45L15.2 16.634v9.177l4 2v-8.823l15.31-8.506-4.576-2.034z" fill="#fff")
+			symbol(id="express-box" width="24" height="24")
+				rect(width="24" height="24" rx="12" fill="#fff" fill-opacity=".01")
+				mask(id="b" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24")
+					rect(width="24" height="24" rx="12" fill="#fff")
+				g(mask="url(#b)" fill-rule="evenodd" clip-rule="evenodd")
+					path(d="M0 0h24v24H0V0z" fill="#FFAD0D")
+					path(d="M17.604 8.49c.24.107.396.346.396.61v5.84a.667.667 0 0 1-.343.584l-5.333 2.962a.667.667 0 0 1-.648 0l-5.333-2.963A.667.667 0 0 1 6 14.941V9.1c0-.264.155-.503.396-.61l5.333-2.37a.667.667 0 0 1 .542 0l5.333 2.37z" fill="#fff")
+					path(d="M13.978 6.816L9.067 9.545v3.059l1.333.667v-2.942l5.103-2.835-1.525-.678z" fill="#E49C0F")
+			symbol(id="heart" width="16" height="16")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M8.677 3.694L8 4.371l-.676-.676A3.51 3.51 0 0 0 2.36 8.658l.676.676s4.965 4.165 4.967 4.163l4.958-4.163.677-.676a3.508 3.508 0 1 0-4.962-4.964zm3.384 4.656L8 11.76 3.939 8.35l-.635-.635A2.176 2.176 0 1 1 6.38 4.638L8 6.257l1.619-1.62a2.175 2.175 0 1 1 3.077 3.078l-.635.635z" fill="#051033" fill-opacity=".01")
+				mask(id="c" maskUnits="userSpaceOnUse" x="1" y="2" width="14" height="12")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M8.677 3.694L8 4.371l-.676-.676A3.51 3.51 0 0 0 2.36 8.658l.676.676s4.965 4.165 4.967 4.163l4.958-4.163.677-.676a3.508 3.508 0 1 0-4.962-4.964zm3.384 4.656L8 11.76 3.939 8.35l-.635-.635A2.176 2.176 0 1 1 6.38 4.638L8 6.257l1.619-1.62a2.175 2.175 0 1 1 3.077 3.078l-.635.635z" fill="#fff")
+				g(mask="url(#c)")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M0 0h16v16H0V0z" fill="#182C4F")
+			symbol(id="options" width="16" height="16")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M2 8a1.333 1.333 0 1 0 2.667 0A1.333 1.333 0 0 0 2 8zm6 1.334a1.333 1.333 0 1 1 0-2.667 1.333 1.333 0 0 1 0 2.667zm4.667 0a1.333 1.333 0 1 1 0-2.667 1.333 1.333 0 0 1 0 2.667z" fill="#051033" fill-opacity=".01")
+				mask(id="i" maskUnits="userSpaceOnUse" x="2" y="6" width="12" height="4")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M2 8a1.333 1.333 0 1 0 2.667 0A1.333 1.333 0 0 0 2 8zm6 1.334a1.333 1.333 0 1 1 0-2.667 1.333 1.333 0 0 1 0 2.667zm4.667 0a1.333 1.333 0 1 1 0-2.667 1.333 1.333 0 0 1 0 2.667z" fill="#fff")
+				g(mask="url(#i)")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M0 0h16v16H0V0z" fill="#182C4F")
+			symbol(id="search" width="16" height="16")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M7.333 12a4.667 4.667 0 1 1 3.738-1.871l1.4 1.4a.667.667 0 1 1-.942.943l-1.4-1.4A4.646 4.646 0 0 1 7.332 12zm0-1.333a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 6.667z" fill="#051033" fill-opacity=".01")
+				mask(id="f" maskUnits="userSpaceOnUse" x="2" y="2" width="11" height="11")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M7.333 12a4.667 4.667 0 1 1 3.738-1.871l1.4 1.4a.667.667 0 1 1-.942.943l-1.4-1.4A4.646 4.646 0 0 1 7.332 12zm0-1.333a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 6.667z" fill="#fff")
+				g(mask="url(#f)")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M0 0h16v16H0V0z" fill="#182C4F")
+			symbol(id="star" width="16" height="16")
+				path(d="M8 2.444l1.717 3.478 3.838.561-2.777 2.706.655 3.822L8 11.205l-3.433 1.806.655-3.822-2.778-2.706 3.84-.56L8 2.443z" stroke="#000" stroke-linecap="round" stroke-linejoin="round")
+				mask(id="j" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="13")
+					path(d="M8 2.444l1.717 3.478 3.838.561-2.777 2.706.655 3.822L8 11.205l-3.433 1.806.655-3.822-2.778-2.706 3.84-.56L8 2.443z" stroke="#000" stroke-linecap="round" stroke-linejoin="round")
+				g(mask="url(#j)")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M0 0h16v16H0V0z" fill="#0A1F44")
+			symbol(id="vk" width="25" height="24")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M12.003 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.977 15.788c-.118.125-.35.15-.35.15h-.764s-1.688.1-3.175-1.42C7.07 12.862 5.638 9.574 5.638 9.574s-.083-.216.007-.32c.1-.117.375-.124.375-.124l1.829-.012s.172.028.295.117c.102.073.16.21.16.21s.295.734.686 1.398c.765 1.296 1.12 1.58 1.38 1.44.378-.202.264-1.832.264-1.832s.007-.59-.19-.854c-.153-.204-.44-.264-.568-.28-.103-.014.066-.249.285-.354.33-.158.91-.167 1.597-.16.535.005.69.038.898.088.486.114.47.483.438 1.278-.01.238-.021.514-.021.832 0 .072-.002.148-.005.227-.011.407-.024.874.25 1.047.14.089.482.013 1.34-1.415.405-.677.71-1.473.71-1.473s.067-.142.17-.203c.106-.062.249-.043.249-.043l1.924-.011s.579-.069.672.188c.098.269-.216.897-1.002 1.926-.746.976-1.11 1.335-1.076 1.653.024.232.26.442.713.854.945.862 1.199 1.315 1.26 1.424l.01.02c.425.69-.47.744-.47.744l-1.709.023s-.367.072-.85-.254c-.253-.17-.5-.449-.736-.714-.36-.405-.693-.78-.976-.69-.477.148-.462 1.155-.462 1.155s.003.216-.105.33z")
+			symbol(id="telegram" width="25" height="24")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M.003 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm9.8 5.5l.204-3.059 5.564-5.022c.245-.216-.053-.322-.377-.126l-6.867 4.333L5.36 12.7c-.64-.196-.645-.636.144-.953l11.56-4.457c.527-.24 1.037.127.835.935l-1.968 9.276c-.138.66-.536.817-1.088.513l-2.999-2.216-1.441 1.402a1.62 1.62 0 0 1-.014.013c-.16.157-.294.287-.586.287z")
+			symbol(id="ok" width="25" height="24")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M.003 12c0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12-12-5.373-12-12zm11.992.193c1.77 0 3.208-1.389 3.208-3.096C15.203 7.389 13.764 6 11.995 6c-1.77 0-3.208 1.39-3.208 3.097s1.439 3.096 3.208 3.096zm3.169 1.782c-.58.352-1.21.601-1.863.745l1.793 1.731a.884.884 0 0 1 0 1.283.963.963 0 0 1-1.328 0l-1.763-1.701-1.762 1.701a.956.956 0 0 1-.665.266.955.955 0 0 1-.664-.266.885.885 0 0 1 0-1.283l1.793-1.731a6.14 6.14 0 0 1-1.863-.745.889.889 0 0 1-.294-1.25.959.959 0 0 1 1.295-.286 4.198 4.198 0 0 0 4.32 0 .96.96 0 0 1 1.295.285.889.889 0 0 1-.294 1.251z")
+				path(d="M11.995 7.814c.732 0 1.328.575 1.328 1.282 0 .707-.596 1.282-1.328 1.282-.732 0-1.328-.575-1.328-1.282 0-.707.596-1.282 1.328-1.282z")
+			symbol(id="instagram" width="25" height="24")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M12.003 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zM9.365 5.639c.682-.032.9-.04 2.639-.04h-.002c1.738 0 1.956.008 2.638.04.682.03 1.147.139 1.555.297.421.163.777.382 1.133.738s.575.713.739 1.134c.157.407.265.872.297 1.553.031.683.039.9.039 2.639 0 1.738-.008 1.956-.039 2.638-.032.681-.14 1.147-.297 1.554-.164.42-.383.778-.739 1.133a3.13 3.13 0 0 1-1.133.739c-.407.158-.872.266-1.554.297-.682.031-.9.039-2.638.039s-1.956-.008-2.639-.039c-.681-.03-1.146-.139-1.554-.297a3.133 3.133 0 0 1-1.133-.739 3.137 3.137 0 0 1-.738-1.133c-.158-.407-.266-.872-.297-1.554-.031-.682-.039-.9-.039-2.638s.008-1.957.039-2.64c.03-.68.138-1.145.297-1.552.164-.421.383-.778.739-1.134a3.134 3.134 0 0 1 1.133-.738c.407-.158.872-.266 1.554-.297z")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M11.43 6.754h.574c1.708 0 1.911.006 2.586.036.624.029.963.133 1.188.22.299.117.512.255.736.48.224.223.362.437.479.735.087.226.192.564.22 1.188.03.675.037.878.037 2.586 0 1.708-.006 1.91-.037 2.585-.029.624-.133.963-.22 1.188a1.98 1.98 0 0 1-.48.735 1.979 1.979 0 0 1-.735.48c-.225.087-.564.191-1.188.22-.675.03-.878.037-2.586.037-1.71 0-1.912-.007-2.587-.037-.624-.03-.962-.134-1.188-.221a1.982 1.982 0 0 1-.736-.479 1.984 1.984 0 0 1-.479-.735c-.088-.226-.192-.564-.22-1.188-.031-.675-.037-.878-.037-2.587s.006-1.91.037-2.585c.028-.624.133-.963.22-1.188.116-.3.255-.512.479-.736.224-.224.437-.363.736-.48.226-.087.564-.191 1.188-.22.59-.027.82-.035 2.013-.036v.002zm3.99 1.062a.768.768 0 1 0 0 1.537.768.768 0 0 0 0-1.537zm-6.703 4.185a3.287 3.287 0 1 1 6.574 0 3.287 3.287 0 0 1-6.574 0z")
+				path(d="M12.004 9.867a2.133 2.133 0 1 1 0 4.267 2.133 2.133 0 0 1 0-4.267z")
+		header#header.page-header
+			.page-header__row
+				a.page-header__toggle(href="#" data-toggle="modal" data-target="#header-menu")
+					span
+				.page-header__logo
+					a(href="index.html")
+						img(src="static/img/logo.png", alt="Cinarta")
+				.page-header__exit
+					.page-header__store-notification
+						img(src="static/img/store.svg", alt="")
+						span 2
+					button.btn.btn--exit(type="button") Войти
+			.page-header__menu.popup-block#header-menu
+				.inner__menu
+					a.page-header__toggle.close-button(href="#" data-toggle="dismiss")
+						span
+					nav.page-header__nav
+						ul.page__list
+							li
+								a(href="#") Категории
+							li
+								a(href="#") Поиск
+							li 
+								a(href="#") Акции
+							li 
+								a(href="#") Приложение
+							li 
+								a(href="#") Обратная связь
+		.main-page-wrap
+			.main-page-blocks
+				section.delivery
+					.wrapper
+						.delivery-block__container
+							.delivery-block__heading
+								.delivery-block__title
+									h1 Быстро доставим 
+										span еду 
+										br
+										| по 
+										b Санкт-Петербургу
+									a(href="#")
+										img(src="static/img/down-arrow.svg", alt="")
+								p Укажите ваше местоположение, чтобы мы смогли предложить вам список доступных ресторанов, маркетов и аптек
+								button.btn.btn--delivery(type="button") Укажите адрес
+									img(src="static/img/small-location.svg", alt="")
+							form.delivery-block__form
+								img(src="static/img/location.svg", alt="")
+								input.form-input(type="text" placeholder="Куда доставить?")
+								button.btn.btn--search(type="button") Найти
+				section.products
+					.wrapper
+						.products-block__container
+							ul.page-list.products__breadcrumbs
+								li
+									a(href="#") Все
+								li
+									.breadcrumbs-icon
+										img(src="static/img/restaurants.svg", alt="")
+									a(href="#") Еда
+								li
+									.breadcrumbs-icon
+										img(src="static/img/products.svg", alt="")
+									a(href="#") Продукты
+								li
+									.breadcrumbs-icon
+										img(src="static/img/water.svg", alt="")
+									a(href="#") Вода
+								li
+									.breadcrumbs-icon
+										img(src="static/img/flow.svg", alt="")
+									a(href="#") Цветы
+								li
+									a(href="#") Лекарства
+								li
+									a(href="#") Красота
+								li
+									.breadcrumbs-icon
+										img(src="static/img/household.svg", alt="")
+									a(href="#") Хозтовары
+							.products-block__nav-block
+								.nav-block__search
+									img(src="static/img/search.svg", alt="")
+									input.form-input(type="text" placeholder="Ресторан, магазин, блюдо или товар..")
+									input.form-input.mobile-input(type="text" placeholder="Поиск ресторана, блюда...")
+								.nav-block__options
+									.select-wrapper
+										select.nice-select
+											option(value="" selected disabled hidden) На сейчас
+											option(value="") На завтра
+											option(value="") На потом
+											option(value="") На неделе
+									a.nav-block__link(href="#") С отзывами
+									a.nav-block__link(href="#") Сначала дешевые
+									a.nav-block__link(href="#") Button
+										img(src="static/img/heart.svg", alt="")
+									.select-wrapper.more
+										select.nice-select
+											option(value="" selected disabled hidden) Ещё
+											option(value="") На завтра
+											option(value="") На потом
+											option(value="") На неделе
+							.products-list
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/bush.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 Буше
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,7
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 15 — 20 
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Выпечка
+											a(href="#") Бургеры
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/tombic-house.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 Томбик Хаус
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,1
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 25 — 40 
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Шаурма
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/pizza-express.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 Pizza Express
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,9
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 25 — 40 
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Шаурма
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/john-donne.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 Джон Донн
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,7
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 15 — 20
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Выпечка
+											a(href="#") Бургеры
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/fruit-market.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 ФруктоМаркет
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,9
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 25 — 40
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Выпечка
+											a(href="#") Бургеры
+								.products-card
+									.products-card__photo-block
+										img(src="static/img/bush.jpg", alt="")
+									.products-card__inner
+										.products-card__heading
+											h3 Pizza Express
+											.products-card__heading-rating
+												a.rating-link(href="#")
+													img.star-active(src="static/img/star-active.svg", alt="")
+													img.star-not-active(src="static/img/star.svg", alt="")
+													span 4,9
+										.products-card__content
+											img.products-card__icon-box(src="static/img/express-box.svg", alt="")
+											.products-card__content-item
+												img(src="static/img/small-store.svg", alt="")
+												span Заказ от 
+													b 400₽
+											.products-card__content-item
+												img(src="static/img/timestamp.svg", alt="")
+												span 
+													b 25 — 40 
+													| мин
+										.products-card__categories
+											a(href="#") Ресторан
+											a(href="#") Выпечка
+											a(href="#") Бургеры
+							button.btn.btn--show(type="button") Показать больше
+				section.deals
+					.wrapper
+						.deals-block__container
+							h2.deals-block__title Лучшие предложения
+							span.deals-block__stock Акции на этой неделе
+							.deals-block__list
+								.deals-block__item
+									.deals-block__photo-block
+										img(src="static/img/deals-photo.jpg", alt="")
+									.deals-block__inner
+										h3 Рамен с курицей
+										span в подарок
+										.deals-block__content
+											p Получите рамен с курицей в подарок при заказе от 1000₽.
+											p Просто введите промокод
+												br
+												span Plusramen
+									.deals-block__restaurant-name
+										.deals-block__restaurant-logo
+											img(src="static/img/logo-restaurant.png", alt="")
+										h3 Буше
+								.deals-block__item
+									.deals-block__photo-block
+										img(src="static/img/deals-photo.jpg", alt="")
+									.deals-block__inner
+										h3 Рамен с курицей
+										span в подарок
+										.deals-block__content
+											p Получите рамен с курицей в подарок при заказе от 1000₽.
+											p Просто введите промокод
+												br
+												span Plusramen
+									.deals-block__restaurant-name
+										.deals-block__restaurant-logo
+											img(src="static/img/logo-restaurant.png", alt="")
+										h3 Буше
+								.deals-block__item
+									.deals-block__photo-block
+										img(src="static/img/deals-photo.jpg", alt="")
+									.deals-block__inner
+										h3 Рамен с курицей
+										span в подарок
+										.deals-block__content
+											p Получите рамен с курицей в подарок при заказе от 1000₽.
+											p Просто введите промокод
+												br
+												span Plusramen
+									.deals-block__restaurant-name
+										.deals-block__restaurant-logo
+											img(src="static/img/logo-restaurant.png", alt="")
+										h3 Буше
+							button.btn.btn--show(type="button") Все акции
+			footer.main-footer
+				.wrapper
+					.main-footer__container
+						.main-footer__content
+							.footer-box
+								img.footer-logo(src="static/img/footer-logo.png", alt="Логотип")
+								.copyright__text
+									p Copyright © 2019 PriceBox.
+									p Все права защищены.
+							.footer-box
+								.footer__social-block
+									a.footer__social-link(href="#")
+										svg(width="25" height="24")
+											use(xlink:href="#vk")
+									a.footer__social-link(href="#")
+										svg(width="25" height="24")
+											use(xlink:href="#telegram")
+									a.footer__social-link(href="#")
+										svg(width="25" height="24")
+											use(xlink:href="#ok")
+									a.footer__social-link(href="#")
+										svg(width="25" height="24")
+											use(xlink:href="#instagram")
+						.footer-box__container
+							.footer-box
+								a.footer__main-link(href="#") Важное
+								a.footer__link(href="#") О сервисе
+								a.footer__link(href="#") Пользовательское соглашение
+								a.footer__link(href="#") Вопросы и ответы
+								a.footer__link(href="#") Мобильные приложения
+								a.footer__link(href="#") Бонусная программа
+							.footer-box
+								a.footer__main-link(href="#") Компания
+								a.footer__link(href="#") Партнерство для ресторанов
+								a.footer__link(href="actors_list.html") Франшиза
+								a.footer__link(href="create_casting.html") Карьера
+								a.footer__link(href="cinema.html") Контакты
+			.popup-block#popup
+				.popup-block__overlay
+					.popup-block__popup
+						.inner__content
+							a.popup-block__close(href="javascript:;" data-toggle="dismiss")
+							.popup-block__row
+								.popup-block__header
+									#map-delivery
+									.popup-block__content
+										input.form-input.popup-input(type="text" placeholder="Улица Невская 37")
+										img.popup-icon(src="static/img/small-location.svg", alt="")
+										button.btn.btn--address Подтвердить адрес
+	script(src="static/js/jquery-3.3.1.min.js")
+	script(src="static/js/jquery.nice-select.min.js")
+	script(src="static/js/main.js")
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

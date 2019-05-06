@@ -1,0 +1,129 @@
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	flex-shrink: 0;
+}
+.main-footer__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	padding-bottom: 55px;
+	width: 928px;
+}
+
+.footer-box__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer-box__container .footer-box {
+	width: 256px;
+}
+
+.footer-box__container .footer-box:not(:last-child) {
+	margin-right: 32px;
+}
+
+.footer-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-logo {
+	width: 178px;
+	height: 32px;
+	margin-bottom: 16px;
+}
+
+.copyright__text {
+	margin-bottom: 24px;
+}
+
+.copyright__text p {
+	font-family: Ubuntu, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #445571;
+	margin: 0;
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+}
+
+.footer__social-block {
+	display: flex;
+	flex-direction: row;
+}
+
+.footer__social-link svg {
+	fill: #B5BBC6;
+	transition: all .3s ease-in-out;
+	&:hover {
+		fill: #ffad0d;
+	}
+}
+
+.footer__social-link:not(:last-child) {
+	margin-right: 8px;
+}
+
+.footer__main-link {
+	font-size: 16px;
+	font-weight: 600;
+	color: #445571;
+	margin-bottom: 15px;
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: #ffad0d;
+	}
+}
+
+.footer__link {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #0A1F44;
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+	transition: all .3s ease-in-out;
+	&:hover {
+		color: #ffad0d;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer-box__container .footer-box:not(:last-child) {
+		margin-right: 0;
+	}
+	.main-footer {
+		border-top: 1px solid #E5E8EB;
+	}
+	.footer-box__container, .main-footer__container {
+		flex-direction: column;
+	}
+	.main-footer__container {
+		padding-bottom: 40px;
+	}
+	.footer-box__container .footer-box, .main-footer__container {
+		width: 100%;
+	}
+	.main-footer__content {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 25px;
+	}
+	.footer-box__container .footer-box {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.main-footer__container, .footer-box__container .footer-box {
+		width: 100%;
+	}
+}
